@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+</head>
+<body>
+
+  <!-- HEAD SECTION FOR INPUT FIELD -->
+<section class="header-section">
+   
+  <h1>IP Address Tracker</h1>
+
+
+  <div class="input-container">
+    <input type="text" required placeholder="Search for any IP address">
+
+    <div class="button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- FLOATING DETAILS SECTION -->
+<section class="detail-section">
+  <span class="address">
+    <h6>IP Address</h6>
+
+    <p id="ip">192.212.174.101</p>
+  </span>
+
+
+  <span class="location">
+    <h6>Location</h6>
+
+    <p id="location">Brooklyn, NY</p>
+  </span>
+
+
+  <span class="timezone">
+    <h6>Timezone</h6>
+
+    <p>UTC <span id="timezone">-5:00</span></p>
+  </span>
+
+
+  <span class="isp">
+    <h6>ISP</h6>
+
+    <p id="isp">SpaceX Starlink</p>
+  </span>
+</section>
+
+<!-- RESULT SECTION -->
+<section class="map-section">
+
+<div id="map"></div>
+</section>
+
+  <script src="script.js"></script>
+</body>
+</html>
