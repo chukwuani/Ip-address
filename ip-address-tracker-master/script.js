@@ -1,4 +1,10 @@
-var map = L.map('map').setView([51.505, -0.09], 13);
+const successCallback = (position) => {
+    let lat = position.coords.latitude
+    let lon = position.coords.longitude
+
+    console.log(lat, lon);
+    
+var map = L.map('map').setView([lat, lon], 13);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -12,7 +18,12 @@ var greenIcon = L.icon({
     iconAnchor:   [20, 49], // point of the icon which will correspond to marker's location
 });
 
-L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map);
+L.marker([lat, lon], {icon: greenIcon}).addTo(map);    
+};
+
+navigator.geolocation.getCurrentPosition(successCallback);
+
+
 
 
 // GETTING IP ADDRESS
